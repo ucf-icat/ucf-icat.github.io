@@ -1,0 +1,41 @@
+<svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="400" height="220" fill="#eef1f8"/>
+
+  <!-- 4x4 mesh grid -->
+  <g stroke="#8a9bc2" stroke-width="1.1">
+    <!-- horizontal links -->
+    <line x1="66" y1="46" x2="166" y2="46"/><line x1="166" y1="46" x2="266" y2="46"/><line x1="266" y1="46" x2="334" y2="46"/>
+    <line x1="66" y1="96" x2="166" y2="96"/><line x1="166" y1="96" x2="266" y2="96"/><line x1="266" y1="96" x2="334" y2="96"/>
+    <line x1="66" y1="146" x2="166" y2="146"/><line x1="166" y1="146" x2="266" y2="146"/><line x1="266" y1="146" x2="334" y2="146"/>
+    <!-- vertical links -->
+    <line x1="66" y1="46" x2="66" y2="146"/><line x1="166" y1="46" x2="166" y2="146"/><line x1="266" y1="46" x2="266" y2="146"/><line x1="334" y1="46" x2="334" y2="146"/>
+  </g>
+
+  <!-- routers -->
+  <g fill="#ffffff" stroke="#0a1730" stroke-width="1.4">
+    <circle cx="66" cy="46" r="9"/><circle cx="166" cy="46" r="9"/><circle cx="266" cy="46" r="9"/><circle cx="334" cy="46" r="9"/>
+    <circle cx="66" cy="96" r="9"/><circle cx="166" cy="96" r="9"/><circle cx="266" cy="96" r="9"/><circle cx="334" cy="96" r="9"/>
+    <circle cx="66" cy="146" r="9"/><circle cx="166" cy="146" r="9"/><circle cx="266" cy="146" r="9"/><circle cx="334" cy="146" r="9"/>
+  </g>
+  <g font-size="6.5" fill="#b9791a" text-anchor="middle">
+    <text x="66" y="49">R</text><text x="166" y="49">R</text><text x="266" y="49">R</text><text x="334" y="49">R</text>
+    <text x="66" y="99">R</text><text x="166" y="99">R</text><text x="266" y="99">R</text><text x="334" y="99">R</text>
+    <text x="66" y="149">R</text><text x="166" y="149">R</text><text x="266" y="149">R</text><text x="334" y="149">R</text>
+  </g>
+
+  <!-- example core+cache tiles hanging off two routers -->
+  <g stroke="#0a1730" stroke-width="1.2" fill="#d7deee">
+    <rect x="46" y="16" width="40" height="18" rx="2"/>
+    <rect x="246" y="116" width="40" height="18" rx="2"/>
+  </g>
+  <g font-size="7" fill="#0a1730" text-anchor="middle">
+    <text x="66" y="28">Core+L1</text>
+    <text x="266" y="128">Core+L1</text>
+  </g>
+  <g stroke="#8a9bc2" stroke-width="1">
+    <line x1="66" y1="34" x2="66" y2="37"/>
+    <line x1="266" y1="116" x2="266" y2="113"/>
+  </g>
+
+  <text x="200" y="200" text-anchor="middle" font-size="10" fill="#8a9bc2">Mesh network-on-chip: routers, links, and tiled cores</text>
+</svg>
