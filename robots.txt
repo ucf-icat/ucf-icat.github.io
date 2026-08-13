@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ucf-icat.github.io/sitemap.xml
+

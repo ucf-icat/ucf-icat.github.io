@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — iCAT Lab, UCF</title>
+<meta name="description" content="iCAT Lab research in sparse-computation acceleration, versatile architectures for large language models, and intelligent infrastructure for chip design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html"><img class="logo-mark" src="images/icat-icon-ondark.png" alt="iCAT Lab logo"> iCAT Lab <span class="full">Intelligent Computer Architecture &amp; Technology · UCF</span></a>
+    <nav class="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="join.html">Join Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" style="padding-bottom:52px;">
+    <div class="container">
+      <p class="eyebrow">Research</p>
+      <h1 style="font-size:2.3rem;">Ongoing <span class="accent">research</span></h1>
+      <p class="lede"><strong>Think beyond limits. Build beyond expectations.</strong></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <div class="project-full" id="sparse-computing">
+        <div class="thumb research-figure"><img src="images/sparse-computing.svg" alt="Sparse matrix transformed into a graph and mapped to a parallel accelerator"></div>
+        <div>
+          <p class="meta">Direction 01 &middot; Theory, algorithms &amp; architecture</p>
+          <h3>Hardware Acceleration for Sparse Computations</h3>
+          <p>Sparsity reduces storage and arithmetic, but it also destroys the regularity that conventional vector and matrix engines rely on. We revisit sparse computation from first principles: representing irregular workloads as graphs, exposing hidden parallelism and reusable structure through graph transformation, and carrying those insights into compilers and accelerator dataflows.</p>
+          <p>Current work extends non-contiguous tiling and quantifiable reuse from sparse-dense matrix multiplication to sparse tensor contraction, sparse-sparse multiplication, graph learning, and scientific workloads. The goal is a common foundation that couples theory with efficient execution on GPUs and domain-specific hardware.</p>
+          <ul>
+            <li>Graph formulations that preserve and exploit unstructured sparsity</li>
+            <li>Irregular tiling, dataflow, workload balancing, and memory-reuse optimization</li>
+            <li>Accelerators for sparse matrices, tensors, nonlinear solvers, and graph models</li>
+          </ul>
+          <div class="research-outcomes">
+            <strong>Highlighted outcomes</strong>
+            <ol>
+              <li><b>Graph-transformation theory and vertex decomposition.</b> Enabled non-contiguous tiling and quantifiable reuse for sparse-dense matrix multiplication, increasing average data reuse from <span>32%</span> to <span>72%</span>.</li>
+              <li><b>Co-occurrence graph representation for high-dimensional tensor contraction.</b> Exposed reusable structure across irregular tensor operations and achieved <span>67%</span> average data reuse.</li>
+            </ol>
+          </div>
+          <div class="related-pubs"><strong>Related publications</strong><a href="publications.html#pub-tensorprism">TensorPrism · ISCA ’26</a><a href="publications.html#pub-spmm">Rethinking Tiling and Dataflow for SpMM · MICRO ’25</a><a href="publications.html#pub-scale">SCALE · MICRO ’24</a><a href="publications.html#pub-egma">EGMA · DAC ’24</a></div>
+        </div>
+      </div>
+
+      <div class="project-full" id="llm-architecture">
+        <div class="thumb research-figure"><img src="images/llm-architecture.svg" alt="A reconfigurable architecture serving language, vision, graph, and action-model kernels"></div>
+        <div>
+          <p class="meta">Direction 02 &middot; Adaptive AI systems</p>
+          <h3>Versatile and Flexible Architectures for Artificial Intelligence</h3>
+          <p>Large language models are becoming multimodal systems that combine language, vision, retrieval, graph reasoning, and action. Their kernels vary in tensor layout, arithmetic precision, compute intensity, sparsity, and communication behavior, making a single rigid dataflow inefficient.</p>
+          <p>We design adaptable architectures that identify regular communication patterns across heterogeneous tensors, switch efficiently among spatial and temporal dataflows, and fuse kernels to keep intermediate data on chip. This direction also develops lower-complexity graph learning and retrieval algorithms so that broader receptive fields do not require proportionally more computation.</p>
+          <ul>
+            <li>Reconfigurable compute and memory systems for multimodal and generative models</li>
+            <li>Unified dataflows across attention, graph, vision, retrieval, and action kernels</li>
+            <li>Algorithm-hardware co-design for precision, sparsity, and receptive-field scaling</li>
+          </ul>
+          <div class="research-outcomes">
+            <strong>Highlighted outcomes</strong>
+            <ol>
+              <li><b>Adapt-NoC flexible communication fabric.</b> Developed an adaptable interconnect that supports heterogeneous dataflows and extends flexible communication across chiplet-based systems.</li>
+              <li><b>Venus versatile accelerator architecture.</b> Maximized data locality for deep-learning inference while regularizing communication patterns across diverse models and dataflows.</li>
+            </ol>
+          </div>
+          <div class="related-pubs"><strong>Related publications</strong><a href="publications.html#pub-gamma">GAMMA · NeurIPS ’25</a><a href="publications.html#pub-vita">VITA · DAC ’24</a><a href="publications.html#pub-versa">Versa-DNN · TPDS ’24</a><a href="publications.html#pub-venus">Venus · DAC ’23</a></div>
+        </div>
+      </div>
+
+      <div class="project-full" id="open-chip-infrastructure" style="border-bottom:none;">
+        <div class="thumb research-figure"><img src="images/open-chip-infrastructure.svg" alt="Intelligent chip-design infrastructure connecting architecture intent, an RTL compiler, PPA prediction, and physical design feedback"></div>
+        <div>
+          <p class="meta">Direction 03 &middot; Intelligent tools &amp; design automation</p>
+          <h3>Intelligent Infrastructure for Chip Design</h3>
+          <p>Chip design remains slow and inaccessible because architectural intent, RTL, logic synthesis, and physical design are separated by semantic gaps and costly iteration. We are building intelligent infrastructure that makes microarchitecture a first-class object throughout the design flow.</p>
+          <p>The foundation combines fast, accurate power-performance-area prediction with a source-to-source RTL compiler. A semantics-preserving intermediate representation retains essential logic information, enabling early-stage physical optimization to guide architecture exploration.</p>
+          <ul>
+            <li>Reproducible representations and benchmarks from architecture to RTL</li>
+            <li>Rapid post-place-and-route PPA prediction without full implementation</li>
+            <li>Compiler-guided timing closure and early microarchitecture design-space exploration</li>
+          </ul>
+          <div class="research-outcomes">
+            <strong>Highlighted outcomes</strong>
+            <ol>
+              <li>Our proprietary tool predicts post-place-and-route delay directly from an early technology-mapped netlist, achieving an average <span>713× runtime speedup</span> over the conventional ASIC implementation flow.</li>
+              <li>Our proprietary tool performs architecture-aware RTL optimization on industry-scale designs, improving peak frequency by <span>6.6%–13.45%</span> over a state-of-the-art commercial synthesis tool while achieving an average <span>100× runtime speedup</span>.</li>
+            </ol>
+          </div>
+          <div class="related-pubs"><strong>Related publications</strong><a href="publications.html#pub-kairos">KAIROS · MICRO ’26</a><a href="publications.html#pub-circuitseer">CircuitSeer · ICCAD ’24</a><a href="publications.html#pub-ocmgen">OCMGen · FCCM ’23</a></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="callout">
+        <h2>Interested in these directions?</h2>
+        <p style="max-width:640px;">We're always looking for motivated Ph.D. students and collaborators interested in computer architecture, hardware accelerators, and AI-assisted chip design.</p>
+        <a class="btn primary" href="join.html">Join the lab &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <img class="footer-logo" src="images/icat-mark-ondark.png" alt="iCAT Lab logo">
+      <div>&copy; 2026 iCAT Lab, University of Central Florida</div>
+    </div>
+    <div>
+      <a href="https://www.ece.ucf.edu/">UCF ECE</a> &middot;
+      <a href="http://haozheng.us/">Prof. Zheng's page</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
